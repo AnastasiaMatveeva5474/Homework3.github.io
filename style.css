@@ -40,6 +40,13 @@ body {
     gap: 12px;
 }
 
+.brand{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
 .logo {
     width: 70px;
     height: 70px;
@@ -215,6 +222,9 @@ main.container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    .brand{
+        justify-content: flex-start;
     }
 
     .site-title h1 {
