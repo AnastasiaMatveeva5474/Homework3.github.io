@@ -4,267 +4,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 2 — Сайт с шапкой, таблицей и формой</title>
+
+    <title>Задание 3 — Адаптивная страница</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===================== ШАПКА ===================== -->
-    <header class="site-header">
-        <div class="container header-inner">
-    <div class="brand">
-            <a href="/" class="logo">Лого</a>
-            <div class="site-title">
-                <h1>Название сайта</h1>
-            </div>
-</div>
-            <nav class="main-nav">
-                <a href="#links-section">Ссылка меню 1</a>
-                <a href="#table-section">Ссылка 2</a>
-                <a href="#form-section">Ссылка 3</a>
-            </nav>
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="/" class="logo">Лого</a>
+
+        <div class="site-title">
+            <h1>Название сайта</h1>
         </div>
-    </header>
 
-    <!-- ===================== ОСНОВНОЙ КОНТЕНТ ===================== -->
-    <main class="container">
+    </div>
 
-        <!-- Список гиперссылок -->
-        <section class="block" id="links-section">
-            <h2>Список гиперссылок</h2>
-            <ul>
-                <li>
-                    <a href="http://kubsu.ru/">1. Абсолютная гиперссылка на главную страницу kubsu.ru</a>
-                </li>
-                <li>
-                    <a href="https://kubsu.ru/">2. Абсолютная гиперссылка на главную страницу kubsu.ru</a>
-                </li>
-                <li>
-                    3. Ссылка-изображение:
+</header>
+
+
+<nav class="main-nav">
+
+    <div class="container">
+
+        <a href="#links-section">Ссылка меню 1</a>
+
+        <a href="#table-section">Ссылка 2</a>
+
+        <a href="#form-section">Ссылка 3</a>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <!-- ===================== СПИСОК ГИПЕРССЫЛОК ===================== -->
+
+    <section class="block links-section" id="links-section">
+
+        <h2>Список гиперссылок</h2>
+
+        <ul>
+
+            <li>
+                <a href="http://kubsu.ru/">
+                    1. Абсолютная гиперссылка на главную страницу kubsu.ru
+                </a>
+            </li>
+
+            <li>
+                <a href="https://kubsu.ru/">
+                    2. Абсолютная гиперссылка на главную страницу kubsu.ru
+                </a>
+            </li>
+
+            <li>
+                3. Ссылка-изображение:
+                <a href="https://kubsu.ru/">
+                    <img src="logokubsu.webp" alt="КубГУ">
+                </a>
+            </li>
+
+            <li>
+                <a href="/internal">
+                    4. Сокращенная ссылка на внутреннюю страницу
+                </a>
+            </li>
+
+            <li>
+                <a href="/">
+                    5. Сокращенная ссылка на главную страницу
+                </a>
+            </li>
+
+            <li>
+                <a href="#form-section">
+                    6. Ссылка на фрагмент текущей страницы
+                </a>
+            </li>
+
+            <li>
+                <a href="page.html?param1=value1&param2=value2&param3=value3">
+                    7. Ссылка с тремя параметрами в URL
+                </a>
+            </li>
+
+            <li>
+                <a href="page.html?id=123">
+                    8. Ссылка с параметром id в URL
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    9. Относительная ссылка на страницу в текущем каталоге
+                </a>
+            </li>
+
+            <li>
+                <a href="about/about.html">
+                    10. Относительная ссылка на страницу в каталоге about
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html">
+                    11. Относительная ссылка на страницу в каталоге уровнем выше
+                </a>
+            </li>
+
+            <li>
+                <a href="../../index.html">
+                    12. Относительная ссылка на страницу в каталоге двумя уровнями выше
+                </a>
+            </li>
+
+            <li>
+                13. Контекстная ссылка в тексте абзаца:
+
+                <p>
+                    Для получения дополнительной информации посетите
                     <a href="https://kubsu.ru/">
-                        <img src="logokubsu.webp" alt="КубГУ">
-                    </a>
-                </li>
-                <li>
-                    <a href="/internal">4. Сокращенная ссылка на внутреннюю страницу</a>
-                </li>
-                <li>
-                    <a href="/">5. Сокращенная ссылка на главную страницу</a>
-                </li>
-                <li>
-                    <a href="#form-section">6. Ссылка на фрагмент текущей страницы</a>
-                </li>
-                <li>
-                    <a href="page.html?param1=value1&param2=value2&param3=value3">
-                        7. Ссылка с тремя параметрами в URL
-                    </a>
-                </li>
-                <li>
-                    <a href="page.html?id=123">8. Ссылка с параметром id в URL</a>
-                </li>
-                <li>
-                    <a href="about.html">9. Относительная ссылка на страницу в текущем каталоге</a>
-                </li>
-                <li>
-                    <a href="about/about.html">10. Относительная ссылка на страницу в каталоге about</a>
-                </li>
-                <li>
-                    <a href="../index.html">11. Относительная ссылка на страницу в каталоге уровнем выше</a>
-                </li>
-                <li>
-                    <a href="../../index.html">12. Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
-                </li>
-                <li>
-                    13. Контекстная ссылка в тексте абзаца:
-                    <p>
-                        Для получения дополнительной информации посетите
-                        <a href="https://kubsu.ru/">официальный сайт Кубанского государственного университета</a>,
-                        где вы найдёте все необходимые сведения.
-                    </p>
-                </li>
-                <li>
-                    <a href="https://ru.wikipedia.org/wiki/HTML#История">14. Ссылка на фрагмент страницы стороннего сайта</a>
-                </li>
-                <li>
-                    15. Ссылки из областей картинки (HTML-тег map):
-                    <br>
-                    <img src="map123.jpg" alt="Карта ссылок" usemap="#imagemap" width="300" height="150">
-                    <map name="imagemap">
-                        <area shape="rect" coords="0,0,150,75" href="https://kubsu.ru/" alt="КубГУ">
-                        <area shape="circle" coords="225,75,50" href="https://ru.wikipedia.org/wiki" alt="Википедия (круг)">
-                    </map>
-                </li>
-                <li>
-                    <a href="">16. Ссылка с пустым href</a>
-                </li>
-                <li>
-                    <a>17. Ссылка без href</a>
-                </li>
-                <li>
-                    <a href="https://kubsu.ru/" rel="nofollow">18. Ссылка, по которой запрещён переход поисковикам</a>
-                </li>
-                <li>
-                    <a href="https://kubsu.ru/" rel="noindex">19. Ссылка, запрещённая для индексации</a>
-                </li>
-                <li>
-                    20. Нумерованный список ссылок с подписями title:
-                    <ol>
-                        <li><a href="https://kubsu.ru/" title="Главная страница КубГУ">КубГУ — главная</a></li>
-                        <li><a href="https://www.kubsu.ru/ru" title="Русская версия сайта КубГУ">КубГУ — русская версия</a></li>
-                        <li><a href="https://www.kubsu.ru/en" title="Английская версия сайта КубГУ">КубГУ — английская версия</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <a href="ftp://user:password@ftp.example.com/file.txt">21. Ссылка на файл на сервере FTP с авторизацией</a>
-                </li>
-            </ul>
-        </section>
+                        официальный сайт Кубанского государственного университета
+                    </a>,
+                    где вы найдёте все необходимые сведения.
+                </p>
+            </li>
 
-        <!-- Таблица -->
-        <section class="block" id="table-section">
-            <h2>Таблица</h2>
+            <li>
+                <a href="https://ru.wikipedia.org/wiki/HTML#История">
+                    14. Ссылка на фрагмент страницы стороннего сайта
+                </a>
+            </li>
+
+            <li>
+
+                15. Ссылки из областей картинки (HTML-тег map):
+
+                <br>
+
+                <img
+                    src="map123.jpg"
+                    alt="Карта ссылок"
+                    usemap="#imagemap"
+                    width="300"
+                    height="150"
+                >
+
+                <map name="imagemap">
+
+                    <area
+                        shape="rect"
+                        coords="0,0,150,75"
+                        href="https://kubsu.ru/"
+                        alt="КубГУ"
+                    >
+
+                    <area
+                        shape="circle"
+                        coords="225,75,50"
+                        href="https://ru.wikipedia.org/wiki"
+                        alt="Википедия"
+                    >
+
+                </map>
+
+            </li>
+
+            <li>
+                <a href="">
+                    16. Ссылка с пустым href
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    17. Ссылка без href
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://kubsu.ru/"
+                    rel="nofollow"
+                >
+                    18. Ссылка, по которой запрещён переход поисковикам
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://kubsu.ru/"
+                    rel="noindex"
+                >
+                    19. Ссылка, запрещённая для индексации
+                </a>
+            </li>
+
+            <li>
+
+                20. Нумерованный список ссылок с подписями title:
+
+                <ol>
+
+                    <li>
+                        <a
+                            href="https://kubsu.ru/"
+                            title="Главная страница КубГУ"
+                        >
+                            КубГУ — главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.kubsu.ru/ru"
+                            title="Русская версия сайта КубГУ"
+                        >
+                            КубГУ — русская версия
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.kubsu.ru/en"
+                            title="Английская версия сайта КубГУ"
+                        >
+                            КубГУ — английская версия
+                        </a>
+                    </li>
+
+                </ol>
+
+            </li>
+
+            <li>
+
+                <a href="ftp://user:password@ftp.example.com/file.txt">
+                    21. Ссылка на файл на сервере FTP с авторизацией
+                </a>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ===================== ТАБЛИЦА ===================== -->
+
+    <section class="block table-section" id="table-section">
+
+        <h2>Таблица</h2>
+
+        <div class="table-wrapper">
+
             <table class="data-table">
+
                 <thead>
+
                     <tr>
+
                         <th>№</th>
                         <th>Название товара</th>
                         <th>Вид товара</th>
                         <th>Стоимость</th>
                         <th>Наличие</th>
+
                     </tr>
+
                 </thead>
+
                 <tbody>
+
                     <tr>
+
                         <td>1</td>
                         <td>Синяя ручка</td>
                         <td>Письменные принадлежности</td>
                         <td>50 ₽</td>
                         <td>Да</td>
+
                     </tr>
+
                     <tr>
+
                         <td>2</td>
                         <td>Чехол для телефона</td>
                         <td>Аксессуары</td>
                         <td>1000 ₽</td>
                         <td>Нет</td>
+
                     </tr>
+
                     <tr>
+
                         <td>3</td>
                         <td>Карандаш</td>
                         <td>Письменные принадлежности</td>
                         <td>50 ₽</td>
                         <td>Да</td>
+
                     </tr>
+
                     <tr>
+
                         <td>4</td>
                         <td>Тряпка для пыли</td>
                         <td>Бытовые товары</td>
                         <td>500 ₽</td>
                         <td>Да</td>
+
                     </tr>
-                    <!-- Объединение по горизонтали (colspan) -->
+
                     <tr>
-                        <td colspan="5" class="total-row">Итого: 1600 ₽ — 4 позиции</td>
+
+                        <td colspan="5" class="total-row">
+                            Итого: 1600 ₽ — 4 позиции
+                        </td>
+
                     </tr>
-                    <!-- Объединение по вертикали (rowspan) -->
+
                     <tr>
+
                         <td rowspan="2">5-6</td>
                         <td>Губка для мытья посуды</td>
                         <td>Бытовые товары</td>
                         <td>100 ₽</td>
                         <td>Да</td>
+
                     </tr>
+
                     <tr>
+
                         <td>Корректор</td>
                         <td>Письменные принадлежности</td>
                         <td>150 ₽</td>
                         <td>Нет</td>
+
                     </tr>
+
                 </tbody>
+
             </table>
-        </section>
 
-        <!-- Форма -->
-        <section class="block" id="form-section">
-            <h2>Форма</h2>
-            <form action="#" method="post" class="contact-form">
-
-                <p>
-                    <label for="fullname">1. ФИО:</label><br>
-                    <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович">
-                </p>
-
-                <p>
-                    <label for="phone">2. Телефон:</label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="+7 (918) 111-22-33">
-                </p>
-
-                <p>
-                    <label for="email">3. E-mail:</label><br>
-                    <input type="email" id="email" name="email" placeholder="post@yandex.ru">
-                </p>
-
-                <p>
-                    <label for="birthdate">4. Дата рождения:</label><br>
-                    <input type="date" id="birthdate" name="birthdate">
-                </p>
-
-                <fieldset>
-                    <legend>5. Пол:</legend>
-                    <label>
-                        <input type="radio" name="gender" value="male"> Мужской
-                    </label>
-                    <label>
-                        <input type="radio" name="gender" value="female"> Женский
-                    </label>
-                </fieldset>
-
-                <p>
-                    <label for="languages">6. Любимый язык программирования (можно выбрать несколько):</label><br>
-                    <select id="languages" name="languages[]" multiple size="11">
-                        <option value="pascal">pascal</option>
-                        <option value="c">C</option>
-                        <option value="cpp">C++</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="haskell">Haskell</option>
-                        <option value="clojure">Clojure</option>
-                        <option value="prolog">Prolog</option>
-                        <option value="scala">Scala</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="bio">7. Биография:</label><br>
-                    <textarea id="bio" name="bio" rows="6" cols="50" placeholder="Расскажите что-то о себе..."></textarea>
-                </p>
-
-                <p>
-                    <label>
-                        <input type="checkbox" name="contract" value="yes">
-                        8. С контрактом ознакомлен(а)
-                    </label>
-                </p>
-
-                <p>
-                    <button type="submit">9. Сохранить</button>
-                </p>
-
-            </form>
-        </section>
-
-    </main>
-
-    <!-- ===================== ПОДВАЛ ===================== -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>(c) Сергей Синица</p>
         </div>
-    </footer>
+
+    </section>
+
+
+    <!-- ===================== ФОРМА ===================== -->
+
+    <section class="block form-section" id="form-section">
+
+        <h2>Форма</h2>
+
+        <form action="#" method="post" class="contact-form">
+
+            <p>
+
+                <label for="fullname">
+                    1. ФИО:
+                </label>
+
+                <br>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Иванов Иван Иванович"
+                >
+
+            </p>
+
+
+            <p>
+
+                <label for="phone">
+                    2. Телефон:
+                </label>
+
+                <br>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+7 (918) 111-22-33"
+                >
+
+            </p>
+
+
+            <p>
+
+                <label for="email">
+                    3. E-mail:
+                </label>
+
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="post@yandex.ru"
+                >
+
+            </p>
+
+
+            <p>
+
+                <label for="birthdate">
+                    4. Дата рождения:
+                </label>
+
+                <br>
+
+                <input
+                    type="date"
+                    id="birthdate"
+                    name="birthdate"
+                >
+
+            </p>
+
+
+            <fieldset>
+
+                <legend>5. Пол:</legend>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                    >
+                    Мужской
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                    >
+                    Женский
+                </label>
+
+            </fieldset>
+
+
+            <p>
+
+                <label for="languages">
+                    6. Любимый язык программирования
+                    (можно выбрать несколько):
+                </label>
+
+                <br>
+
+                <select
+                    id="languages"
+                    name="languages[]"
+                    multiple
+                    size="11"
+                >
+
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskell">Haskell</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+
+                </select>
+
+            </p>
+
+
+            <p>
+
+                <label for="bio">
+                    7. Биография:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="bio"
+                    name="bio"
+                    rows="6"
+                    cols="50"
+                    placeholder="Расскажите что-то о себе..."
+                ></textarea>
+
+            </p>
+
+
+            <p>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="contract"
+                        value="yes"
+                    >
+
+                    8. С контрактом ознакомлен(а)
+
+                </label>
+
+            </p>
+
+
+            <p>
+
+                <button type="submit">
+                    9. Сохранить
+                </button>
+
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>(с) ...</p>
+    </div>
+
+</footer>
 
 </body>
-
 </html>

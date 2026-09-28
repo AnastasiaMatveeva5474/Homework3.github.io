@@ -1,168 +1,306 @@
-/* ============================================================
-   СБРОС
-   ============================================================ */
+/* ==================================================
+   MOBILE FIRST
+   ================================================== */
+
 * {
     box-sizing: border-box;
+}
+
+
+html {
     margin: 0;
     padding: 0;
 }
 
+
 body {
+    margin: 0;
+    padding: 0;
+
     font-family: Arial, sans-serif;
+
     background: #f4f4f4;
     color: #222;
+
     line-height: 1.5;
 }
 
-/* ============================================================
-   MOBILE FIRST — базовые стили для смартфонов
-   ============================================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-/* ---------- Шапка ---------- */
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
 .site-header {
-    background: #2c7be5;
-    color: #fff;
     width: 100%;
+
+    background: #2c7be5;
+    color: #ffffff;
 }
+
 
 .header-inner {
+    min-height: 100px;
+
     display: flex;
-    flex-direction: column;
+
     align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 12px;
+    justify-content: space-between;
+
+    gap: 15px;
 }
 
-.brand{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
 
 .logo {
     width: 70px;
     height: 70px;
-    border: 2px solid #fff;
+
+    border: 2px solid #ffffff;
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    color: #fff;
+
+    color: #ffffff;
     text-decoration: none;
+
+    font-family: Georgia, serif;
+    font-weight: bold;
+
     flex-shrink: 0;
 }
 
-.site-title h1 {
-    font-size: 20px;
-    text-align: center;
+
+.site-title {
+    text-align: right;
 }
 
-/* ---------- Меню (на телефоне — вертикальный список) ---------- */
+
+.site-title h1 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
+
 .main-nav {
+    width: 100%;
+
+    background: #2c7be5;
+
+    border-top: 1px solid #ffffff;
+}
+
+
+.main-nav .container {
     display: flex;
+
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+
     width: 100%;
 }
+
 
 .main-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
     display: block;
-    width: 100%;
-    text-align: center;
-    padding: 6px 0;
+
+    padding: 10px 0;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 
 .main-nav a:hover {
     text-decoration: underline;
 }
 
-/* ---------- Основной контент ---------- */
-main.container {
+
+/* ==================================================
+   MAIN
+   ================================================== */
+
+main {
+    width: 100%;
+
     display: flex;
+
     flex-direction: column;
-    padding-top: 15px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+
+/*
+   В HTML список ссылок находится ПЕРЕД таблицей.
+
+   Но на мобильном через Flexbox order
+   таблица должна отображаться первой.
+*/
+
+.table-section {
+    order: 1;
+}
+
+
+.links-section {
+    order: 2;
+}
+
+
+.form-section {
+    order: 3;
+}
+
+
+/* ==================================================
+   CONTENT BLOCKS
+   ================================================== */
+
 .block {
+    width: 100%;
+
     background: #cfe2ff;
+
     border: 1px solid #2c7be5;
-    padding: 20px;
+
+    padding: 15px;
+
     margin: 10px 0;
 }
 
+
 .block h2 {
+    margin-top: 0;
     margin-bottom: 10px;
+
     color: #1a4f9c;
+
+    font-family: Georgia, serif;
+    font-weight: normal;
 }
 
-/* ============================================================
-   ORDER — визуальный порядок блоков на телефоне:
-   таблица (1) → список (2) → форма (3)
-   ============================================================ */
-#links-section { order: 2; }
-#table-section { order: 1; }
-#form-section  { order: 3; }
 
-/* ---------- Список ссылок ---------- */
+/* ==================================================
+   LINKS
+   ================================================== */
+
 .block ul {
-    list-style: square inside;
+    padding-left: 20px;
+
+    list-style: square;
 }
 
-.block ul a {
+
+.block li {
+    margin-bottom: 8px;
+}
+
+
+.block a {
     color: #1a4f9c;
 }
 
-/* ---------- Таблица ---------- */
+
+.links-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ==================================================
+   TABLE
+   ================================================== */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
 .data-table {
     width: 100%;
+
     border-collapse: collapse;
-    background: #fff;
-    font-size: 14px;
+
+    background: #ffffff;
 }
+
 
 .data-table th,
 .data-table td {
     border: 1px solid #2c7be5;
+
     padding: 8px;
+
     text-align: left;
 }
 
+
 .data-table thead th {
     background: #2c7be5;
-    color: #fff;
+
+    color: #ffffff;
 }
+
 
 .data-table tbody tr:nth-child(odd) {
     background: #eaf2ff;
 }
 
+
 .data-table tbody tr:nth-child(even) {
     background: #ffffff;
 }
 
+
 .total-row {
     text-align: center;
+
     font-weight: bold;
+
     background: #bcd6ff !important;
 }
 
-/* ---------- Форма ---------- */
+
+/* ==================================================
+   FORM
+   ================================================== */
+
 .contact-form p {
     margin-bottom: 12px;
 }
+
 
 .contact-form input[type="text"],
 .contact-form input[type="tel"],
@@ -170,94 +308,178 @@ main.container {
 .contact-form input[type="date"],
 .contact-form textarea,
 .contact-form select {
-    padding: 6px 8px;
+    width: 100%;
+    max-width: 100%;
+
+    padding: 7px 8px;
+
     border: 1px solid #2c7be5;
     border-radius: 4px;
-    max-width: 100%;
+
+    font-family: Arial, sans-serif;
 }
+
+
+.contact-form textarea {
+    resize: vertical;
+}
+
 
 .contact-form fieldset {
     border: 1px solid #2c7be5;
+
     padding: 10px;
+
     margin-bottom: 12px;
+
     border-radius: 4px;
 }
 
+
+.contact-form fieldset label {
+    margin-right: 15px;
+}
+
+
 .contact-form button {
     background: #2c7be5;
-    color: #fff;
+
+    color: #ffffff;
+
     border: none;
+
     padding: 10px 20px;
+
     cursor: pointer;
+
     border-radius: 4px;
+
     font-size: 15px;
 }
+
 
 .contact-form button:hover {
     background: #1a4f9c;
 }
 
-/* ---------- Подвал ---------- */
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
 .site-footer {
-    background: #2c7be5;
-    color: #fff;
     width: 100%;
-    padding: 15px 0;
+
+    background: #2c7be5;
+
+    color: #ffffff;
+
+    margin-top: 20px;
+
+    padding: 20px 0;
+
     text-align: center;
-    margin-top: 30px;
 }
 
-/* ============================================================
-   MEDIA QUERY — для планшетов и компьютеров (экран ≥ 768px)
-   ============================================================ */
+
+.site-footer p {
+    margin: 0;
+}
+
+
+/* ==================================================
+   TABLET / DESKTOP
+   ================================================== */
+
 @media (min-width: 768px) {
 
     .container {
         max-width: 960px;
-        margin: 0 auto;
-        padding: 0 15px;
     }
+
+
+    /* ------------------------------
+       HEADER
+       ------------------------------ */
 
     .header-inner {
+        min-height: 110px;
+    }
+
+
+    /* ------------------------------
+       NAVIGATION
+       ------------------------------ */
+
+    .main-nav .container {
         flex-direction: row;
-        justify-content: space-between;
+
         align-items: center;
-    }
-    .brand{
-        justify-content: flex-start;
+
+        gap: 20px;
     }
 
-    .site-title h1 {
-        text-align: left;
-    }
-
-    .main-nav {
-        flex-direction: row;
-        width: auto;
-        gap: 15px;
-    }
 
     .main-nav a {
-        width: auto;
-        padding: 0;
+        border-bottom: none;
+
+        padding: 10px 0;
     }
 
-    main.container {
-        display: block;
-        padding-top: 0;
+
+    /* ------------------------------
+       ORDER
+       ------------------------------ */
+
+    /*
+       На компьютере возвращаем
+       порядок предыдущего задания:
+
+       1. Список ссылок
+       2. Таблица
+       3. Форма
+    */
+
+    .links-section {
+        order: 1;
     }
 
-    #links-section,
-    #table-section,
-    #form-section {
-        order: 0;
+
+    .table-section {
+        order: 2;
     }
+
+
+    .form-section {
+        order: 3;
+    }
+
+
+    /* ------------------------------
+       CONTENT
+       ------------------------------ */
 
     .block {
+        padding: 20px;
+
         margin: 20px 0;
     }
 
-    .data-table {
-        font-size: 16px;
+
+    /* ------------------------------
+       FORM
+       ------------------------------ */
+
+    .contact-form input[type="text"],
+    .contact-form input[type="tel"],
+    .contact-form input[type="email"],
+    .contact-form input[type="date"] {
+        width: auto;
     }
+
+
+    .contact-form textarea {
+        width: auto;
+    }
+
 }
